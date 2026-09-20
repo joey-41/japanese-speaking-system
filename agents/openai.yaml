@@ -1,0 +1,4 @@
+interface:
+  display_name: "Japanese Speaking System"
+  short_description: "Set up Japanese speaking practice"
+  default_prompt: "Use $japanese-speaking-system to generate the Japanese ChatGPT project prompt or run this week’s review."
