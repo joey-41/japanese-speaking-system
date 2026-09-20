@@ -24,12 +24,11 @@ Input → Chunk → Retrieval → Output → Correction → Retest
 `AGENT-SETUP.md` **raw 链接**交给一个拥有本地文件和网络权限的 Agent，让 Agent
 自己读取安装说明、下载仓库、安装并校验 Skill。
 
-把下面的 `<OWNER>/<REPOSITORY>` 替换成实际发布仓库后，在 Codex 或其他本地 Agent
-中发送：
+在 Codex 或其他本地 Agent 中发送：
 
 ```text
 请读取并严格执行这个 Agent 安装文档，帮我安装日语口语训练 Skill：
-https://raw.githubusercontent.com/<OWNER>/<REPOSITORY>/main/AGENT-SETUP.md
+https://raw.githubusercontent.com/joey-41/japanese-speaking-system/main/AGENT-SETUP.md
 ```
 
 Agent 应当完成以下工作：
@@ -40,9 +39,11 @@ Agent 应当完成以下工作：
 4. 检查 `SKILL.md`、`README.md`、`AGENT-SETUP.md` 和 `references/` 是否完整；
 5. 读取已安装的 Skill，生成 ChatGPT 项目提示词。
 
-用户不应被要求手动下载或复制 Skill。当前仓库如果尚未发布到 GitHub，以上链接中的
-`<OWNER>/<REPOSITORY>` 只是占位符，不能直接使用；发布后必须替换成真实仓库路径，
-也不要把本地路径伪装成 GitHub 链接。
+用户不应被要求手动下载或复制 Skill。本 Skill 的公开仓库地址是：
+
+<https://github.com/joey-41/japanese-speaking-system>
+
+如果以后迁移仓库，需要同步更新上面的 raw 链接；不要把本地路径伪装成 GitHub 链接。
 
 安装完成后仍有一个明确的产品边界：Agent 不能假装替用户创建或修改 ChatGPT 项目。
 用户只需要手动完成最后这一步：
